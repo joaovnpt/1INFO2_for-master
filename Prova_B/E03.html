@@ -1,0 +1,23 @@
+<script>
+    /*
+    Problema: Somar Dezenas
+    Desenvolva um programa que efetue a soma de todas as dezenas que existem entre 1 e 1001.
+    Apresente a soma ao final do programa.
+    */
+
+    let dezenas = 0
+    let listaD = [];
+    let somaDezenas = 0
+
+    for (let i = 0; i < 1001; i++) {
+        const num = i;
+        if (i % 10 === 0) {
+            somaDezenas += i
+        }
+    }
+    document.write(somaDezenas)
+
+    /*
+    O resultado deverá ser 50500.
+    */
+</script>

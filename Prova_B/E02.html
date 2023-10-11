@@ -1,0 +1,26 @@
+<script>
+    /*
+    Problema: Separar Carros e Motos
+    Considere a lista seguinte:
+    let lista = ["Gol", "YBR", "CG", "Titan", "Palio", "Fusca", "Harley Davidson"];
+    Pergunte ao usuário quais itens são carro (C) e quais itens são motocicleta (M) e separe-os em listas distintas.
+    Apresente ao usuário as listas com os respectivos itens.
+    */
+
+    let lista = ["Gol", "YBR", "CG", "Titan", "Palio", "Fusca", "Harley Davidson"];
+    listaCarros = [];
+    listaMotos = [];
+    for (const veiculo of lista) {
+        alert(veiculo);
+        const pergunta = prompt("Este veículo é carro (C) ou moto (M)?").trim().toUpperCase();
+        if (pergunta == "C") listaCarros.push(veiculo);
+        else if (pergunta == "M") listaMotos.push(veiculo);
+        else alert("Erro. Informe apenas com C ou M.");
+    }
+    document.write(`Lista de carros: ${listaCarros.join(", ")}. <br>Lista de motos: ${listaMotos.join(", ")}.`);
+
+    /*
+    Lista de carros: Gol, Palio, Fusca
+    Lista de motos: YBR, CG, Titan, Harley Davidson
+    */
+</script>

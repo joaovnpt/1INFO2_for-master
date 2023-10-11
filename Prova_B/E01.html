@@ -1,0 +1,31 @@
+<script>
+    /*
+    Problema: Ordenar números
+    Considere a seguinte lista de números:
+    let lista = [30, 20, 25, 17, 99, 12];
+    Ordene os números de forma crescente e identifique se o número é par ou é ímpar.
+    */
+
+    let lista = [30, 20, 25, 17, 99, 12];
+    let listaPares = [];
+    let listaImpares = [];
+    let listaNova = lista.sort((a, b) => a-b);
+    for (const num of listaNova) {
+        if (num % 2 == 0) listaPares.push(num);
+        else listaImpares.push(num);
+        
+        if (listaPares.includes(num)) document.write(`${num} é par <br>`);
+        else if (listaImpares.includes(num)) document.write(`${num} é ímpar <br>`);
+    }
+    
+
+    /*
+    O programa deverá apresentar:
+    12 é par
+    17 é ímpar
+    20 é par
+    25 é ímpar
+    30 é par
+    99 é ímpar
+    */
+</script>
